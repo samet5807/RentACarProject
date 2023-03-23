@@ -5,22 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Core.Results
+namespace Core.Utilities.Results
 {
-    public class DataResult<T> :Result, IDataResult<T>
+    public class DataResult<T> : Result, IDataResult<T>
     {
         public DataResult(T data, bool success) : base(success)
         {
             Data = data;
         }
 
-        public DataResult(T data,bool success, string message) : base(success, message)
+        public DataResult(T data, bool success, string message) : base(success, message)
         {
             Data = data;
         }
 
         public T Data { get; }
 
-        
+
     }
 }
